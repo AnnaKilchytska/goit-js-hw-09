@@ -30,7 +30,7 @@ function onSubmit(e) {
   e.preventDefault();
   const { delay, step, amount } = getFormData(e);
 
-  for (position = 0; position < amount; position++) {
+  for (position = 1; position <= amount; position++) {
     const promiseComputedDelay = delay + step * position;
     // console.log(promiseComputedDelay);
     createPromise(position, promiseComputedDelay)
