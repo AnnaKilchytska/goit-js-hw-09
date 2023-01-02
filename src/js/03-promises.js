@@ -32,7 +32,7 @@ function onSubmit(e) {
 
   for (position = 0; position < amount; position++) {
     const promiseComputedDelay = delay + step * position;
-    console.log(promiseComputedDelay);
+    // console.log(promiseComputedDelay);
     createPromise(position, promiseComputedDelay)
       .then(({ position, delay }) => {
         // console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
@@ -51,7 +51,7 @@ function getFormData(e) {
   const step = Number(e.target[1].value);
   const amount = Number(e.target[2].value);
 
-  console.log(delay, step, amount);
+  // console.log(delay, step, amount);
 
   return { delay, step, amount };
 }
